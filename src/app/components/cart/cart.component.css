@@ -1,0 +1,81 @@
+/* خلفية عربة التسوق */
+.cart-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* تأثير عند التحليق على العربة */
+.cart-section:hover {
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+
+/* زر تفريغ العربة */
+.clear-btn {
+  transition: all 0.3s;
+}
+
+.clear-btn:hover {
+  transform: scale(1.1);
+}
+
+/* عناصر العربة */
+.cart-item {
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+}
+
+/* صورة المنتج */
+.product-img {
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* زر الحذف */
+.remove-btn {
+  font-size: 0.9rem;
+  transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.remove-btn:hover {
+  color: #d32f2f;
+  transform: scale(1.1);
+}
+
+/* التحكم في الكمية */
+.quantity-btn {
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.quantity-btn:hover {
+  transform: scale(1.1);
+}
+
+.quantity-count {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* زر الطلب */
+.order-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}

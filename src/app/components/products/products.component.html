@@ -1,0 +1,43 @@
+<section class="my-5">
+  <div class="container">
+    <h2 class="text-center mb-4 animate-fade-in">Popular Products</h2>
+
+    <!-- Search Bar -->
+    <input type="search" class="form-control w-50 mx-auto mb-4 search-box animate-fade-in" placeholder="Search..." [(ngModel)]="searchTerm">
+
+    <!-- Product Cards -->
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6" *ngFor="let item of products | search:searchTerm; let i = index">
+        <div class="card border-0 shadow-sm p-3 product-card animate-scale-in" [style.animationDelay]="i * 0.1 + 's'">
+          <div class="p-3 text-center cursor-pointer" [routerLink]="['/details', item._id]">
+            
+            <div class="image-container">
+             
+              <img [src]="item.imageCover" [alt]="item.title" class="product-image">
+
+            </div>
+            <h3 class="h6 mt-2 text-muted">{{ item.category.name }}</h3>
+            <h4 class="h6">{{ item.title | buy:2 }}</h4>
+
+            <div class="mt-2">
+              <span class="fw-bold text-success">{{ item.price | currency: "EGP" }}</span>
+
+              <!-- Ratings -->
+              <div class="d-flex justify-content-center align-items-center mt-2 rating-container">
+                <ng-container *ngFor="let num of [1,2,3,4,5].slice(0, item.ratingsAverage)">
+                  <i class="fas fa-star text-warning rating-star"></i>
+                </ng-container>
+                <i class="fa-solid fa-star-half-stroke text-warning rating-star" *ngIf="item.ratingsAverage % 1 !== 0"></i>
+                <span class="text-muted ms-1">({{ item.ratingsAverage }})</span>
+              </div>
+            </div>
+          </div>
+          <button (click)="addCars(item._id)" class="btn btn-primary w-100 mt-2 add-to-cart-btn">Add to Cart</button>
+          <button (click)="addwashlist(item._id)" class="wishlist-btn">
+            <i class="fa fa-heart" [ngStyle]="{'color': isInWishlist(item._id) ? 'red' : 'black'}"></i>
+          </button>
+                  </div>
+      </div>
+    </div>
+  </div>
+</section>

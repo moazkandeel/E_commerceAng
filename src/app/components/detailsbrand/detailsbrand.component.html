@@ -1,0 +1,16 @@
+<section class="category-details w-75 mx-auto py-5">
+  <div class="row d-flex align-items-center justify-content-between">
+    <!-- صورة الفئة -->
+    <div class="col-md-3 text-center">
+      <div class="image-container">
+        <img class="category-image" [src]="brandDetails.image" [alt]="brandDetails.slug">
+      </div>
+    </div>
+
+    <!-- معلومات الفئة -->
+    <div class="col-md-8 text-end animate-text">
+      <h2 class="category-title">{{ brandDetails.slug }}</h2>
+      <h3 class="category-subtitle">{{ brandDetails.name }}</h3>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+/* أنيميشن الظهور التدريجي */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* تأثير تكبير الصورة عند المرور */
+@keyframes imageHover {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* تأثير التنفس للصورة */
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* أنيميشن للنص */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* تنسيق عام للقسم */
+.category-details {
+  background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* تكبير الصورة قليلاً */
+.image-container {
+  display: inline-block;
+  /* width: 150px; */
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  animation: breathing 3s infinite ease-in-out;
+}
+
+.category-image {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .category-image {
+  animation: imageHover 0.5s forwards;
+}
+
+/* تنسيق النصوص */
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  animation: slideIn 0.8s ease-out;
+}
+
+.category-subtitle {
+  font-size: 20px;
+  color: #777;
+  font-weight: 500;
+  animation: slideIn 1s ease-out;
+}
+
+/* محاذاة النص لليمين */
+.text-end {
+  text-align: right !important;
+}

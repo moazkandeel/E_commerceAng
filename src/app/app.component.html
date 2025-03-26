@@ -1,0 +1,11 @@
+<router-outlet>
+
+  <!-- زر الرجوع للأعلى -->
+</router-outlet>
+<button class="whatsapp-button" (click)="openWhatsApp()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+</button>
+
+  <button class="scroll-to-top " *ngIf="showScroll" (click)="scrollToTop()">
+    ⬆
+  </button>

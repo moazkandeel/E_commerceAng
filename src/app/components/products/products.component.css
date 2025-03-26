@@ -1,0 +1,80 @@
+/* أنيميشن الظهور التدريجي */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* إضافة تأثير عند التحميل */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* تأثير البحث */
+.search-box {
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+}
+
+/* ستايل الكارد */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ضبط حجم الصور */
+.image-container {
+  /* width: 100%; */
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+/* أنيميشن النجوم */
+.rating-star {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* تأثير زر Add to Cart */
+.add-to-cart-btn {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* تكبير القلب */
+}
+

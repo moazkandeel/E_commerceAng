@@ -1,0 +1,62 @@
+<section class="register-container">
+  <h3 class="title">🚀 Join Us Now!</h3>
+  <form [formGroup]="registerForm" (ngSubmit)="handleForm()" class="form-box">
+
+    <div class="input-group">
+      <input #inputName type="text" id="name" class="input-field" formControlName="name" placeholder=" " required>
+      <label for="name" class="input-label">Full Name</label>
+      <div class="error-message" *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.touched || inputName.value.length>0)">
+        Name must be 3-20 characters
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input #inputEmail type="email" id="email" class="input-field" formControlName="email" placeholder=" " required>
+      <label for="email" class="input-label">Email Address</label>
+      <div class="error-message" *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || inputEmail.value.length>0)">
+        Enter a valid email
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input #inputPassword type="password" id="password" class="input-field" formControlName="password" placeholder=" " required>
+      <label for="password" class="input-label">Password</label>
+      <div class="error-message" *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || inputPassword.value.length>0)">
+        Must be 6+ characters
+      </div>
+    </div>
+    <div class="input-group">
+      <input #inputRePassword type="password" id="rePassword" class="input-field" formControlName="rePassword" placeholder=" " required>
+      <label for="rePassword" class="input-label">RePassword:</label>
+      <div class="alert alert-danger" *ngIf="registerForm.get('rePassword')?.invalid && (registerForm.get('rePassword')?.touched || inputRePassword.value.length>0)">
+        RePassword must start with an uppercase letter and be 6-20 characters long
+      </div>
+    </div>
+
+    <!-- <div class="input-group">
+      <label for="rePassword">RePassword:</label>
+      <input #inputRePassword type="password" id="rePassword" class="form-control" formControlName="rePassword">
+      <div class="alert alert-danger" *ngIf="registerForm.get('rePassword')?.errors && (registerForm.get('rePassword')?.touched || inputRePassword.value.length>0)">
+        <p *ngIf="registerForm.get('rePassword')?.getError('required')">RePassword is required</p>
+        <p *ngIf="registerForm.get('rePassword')?.getError('pattern')">RePassword must start with an uppercase letter and be 6-20 characters long</p>
+      </div>
+    </div> -->
+
+    <div class="input-group">
+      <input #inputPhone type="tel" id="phone" formControlName="phone" class="input-field" placeholder=" " required>
+      <label for="phone" class="input-label">Phone Number</label>
+      <div class="error-message" *ngIf="registerForm.get('phone')?.errors && (registerForm.get('phone')?.touched || inputPhone.value.length>0)">
+        <p *ngIf="registerForm.get('phone')?.getError('required')">Phone number is required</p>
+        <p *ngIf="registerForm.get('phone')?.getError('pattern')">Only Egyptian phone numbers are accepted</p>
+      </div>
+    </div>
+
+
+    <button [disabled]="registerForm.invalid" type="submit" class="btn-main ms-auto d-block">
+      <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+      Register</button>
+
+    <p  *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
+
+  </form>
+</section>

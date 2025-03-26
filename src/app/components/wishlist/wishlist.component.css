@@ -1,0 +1,77 @@
+/* الحاوية الرئيسية */
+.wishlist-container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* الكارد لكل عنصر */
+.wishlist-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+}
+
+/* تأثير عند تمرير الماوس */
+.wishlist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* صورة المنتج */
+.product-img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  /* max-height: 120px; */
+  object-fit: cover;
+}
+
+/* تكبير الصورة عند المرور */
+.product-img:hover {
+  transform: scale(1.08);
+}
+
+/* تنسيق الوصف */
+.description-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* تصنيف النجوم */
+.rating-container {
+  font-size: 16px;
+}
+
+.rating-star {
+  margin-right: 3px;
+}
+
+/* زر الحذف */
+.remove-btn {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+/* زر الإضافة إلى السلة */
+.add-to-cart-btn {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  background: #007bff;
+  opacity: 0.9;
+}

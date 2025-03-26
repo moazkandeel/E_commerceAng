@@ -1,0 +1,54 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* background: #25D366; */
+  /* border: none; */
+  width: 45px;
+  height: 44px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 23px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+  background: #01041f;
+}
+
+.scroll-to-top:active {
+  transform: scale(0.9);
+}
+
+
+/* what's */
+.whatsapp-button {
+  position: fixed;
+  top: 515px;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
